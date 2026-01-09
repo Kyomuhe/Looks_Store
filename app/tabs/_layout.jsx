@@ -1,10 +1,11 @@
-import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons';
+import { Tabs } from "expo-router";
 
 export default function TabLayout(){
     return(
         <Tabs
         screenOptions={{
+            headerShown: false,
             tabBarActiveTintColor:'#007AFF',
             tabBarInactiveTintColor:'gray',
         }}
@@ -18,17 +19,27 @@ export default function TabLayout(){
                 )
             }}
             />
+
             <Tabs.Screen
-            name="two"
+            name='collections'
             options ={{
-                title:'Search',
+                title:'Collections',
                 tabBarIcon:({color,size})=>(
-                    <Ionicons name="search" color={color} size={size}/>
+                    <Ionicons name="folder" color={color} size={size}/>
                 )
             }}
             />
             <Tabs.Screen
-            name="three"
+            name='calendar'
+            options ={{
+                title:'Calendar',
+                tabBarIcon:({color,size})=>(
+                    <Ionicons name="calendar" color={color} size={size}/>
+                )
+            }}
+            />
+            <Tabs.Screen
+            name="profile"
             options ={{
                 title:'Profile',
                 tabBarIcon:({color,size})=>(

@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-export default function Two() {
+export default function Collections() {
   return (
     <View
       style={{
@@ -9,7 +9,7 @@ export default function Two() {
         alignItems: "center",
       }}
     >
-      <Text style ={{fontSize:20}}>Home screen</Text>
+      <Text style ={{fontSize:20}}>This will be worked on later</Text>
     </View>
   );
 }

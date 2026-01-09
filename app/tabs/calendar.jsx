@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-export default function Three() {
+export default function Calendar() {
   return (
     <View
       style={{
@@ -9,7 +9,7 @@ export default function Three() {
         alignItems: "center",
       }}
     >
-      <Text style ={{fontSize:20}}>Home screen</Text>
+      <Text style ={{fontSize:20}}>This will be worked on later</Text>
     </View>
   );
 }
