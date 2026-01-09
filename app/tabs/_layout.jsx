@@ -6,7 +6,7 @@ export default function TabLayout(){
         <Tabs
         screenOptions={{
             headerShown: false,
-            tabBarActiveTintColor:'#007AFF',
+            tabBarActiveTintColor:'#ec4899',
             tabBarInactiveTintColor:'gray',
         }}
         >
@@ -39,9 +39,9 @@ export default function TabLayout(){
             }}
             />
             <Tabs.Screen
-            name="profile"
+            name="myLooks"
             options ={{
-                title:'Profile',
+                title:'ALL Looks',
                 tabBarIcon:({color,size})=>(
                     <Ionicons name="person" color={color} size={size}/>
                 )

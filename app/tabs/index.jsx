@@ -1,13 +1,14 @@
-import { StyleSheet, View, Text, TextInput, TouchableOpacity,Image } from 'react-native';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity,Image ,ScrollView} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import profile from '../../assets/images/profile.png';
+import { router } from 'expo-router';
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.textContainer}>
-          <Text style={styles.logo}>My Looks</Text>
+          <Text style={styles.logo}>Looks Store</Text>
           <Text style={styles.subtitle}>Your style, your story</Text>
         </View>
 
@@ -50,7 +51,16 @@ export default function Index() {
           <Text style={styles.statLabel}>Collections</Text>
         </View>
       </View>
-    </View>
+      <View style={styles.recentLooks}>
+        <Text style={{fontSize: 20, fontWeight: 'bold', color: '#1a1a1a'}}>Recent Looks</Text>
+        <TouchableOpacity
+          onPress={() => router.push('tabs/myLooks')}
+        >
+        <Text style={{fontSize: 16, color: '#a855f7'}}>View All</Text>
+        </TouchableOpacity>
+
+      </View>
+    </ScrollView>
   );
 }
 
@@ -135,5 +145,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#6b7280',
     textAlign: 'center',
+  },
+  recentLooks: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 12,
   },
 });
