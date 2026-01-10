@@ -2,13 +2,18 @@ import { StyleSheet, View, Text, TextInput, TouchableOpacity,Image ,ScrollView} 
 import { Ionicons } from '@expo/vector-icons';
 import profile from '../../assets/images/profile.png';
 import { router } from 'expo-router';
+import logo from '../../assets/images/LooksLogo.jpeg'
 
 export default function Index() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.textContainer}>
-          <Text style={styles.logo}>Looks Store</Text>
+          <Image 
+            source={logo}
+            style={{width: 180, height: 60, marginBottom: 4}}
+          />
+          {/* <Text style={styles.logo}>Looks Store</Text> */}
           <Text style={styles.subtitle}>Your style, your story</Text>
         </View>
 

@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, ScrollView, TouchableOpacity, TextInput } from "react-native";
+import { Text, View, StyleSheet, ScrollView, TouchableOpacity, TextInput, Image } from "react-native";
+import kay from '../../assets/images/kay.png'
 
 export default function Collections() {
   const handleFABPress = () => {
@@ -7,11 +8,10 @@ export default function Collections() {
 
   return (
     <View style={styles.container}>
-
       <ScrollView style={styles.scrollView}>
         <View style={{ flex: 1, marginTop: 50 }}>
-          <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#ec4899' }}>Collections</Text>
-          <Text style={{ fontSize: 16, color: 'gray',marginTop: 8 }}>Create folders to organise your looks</Text>
+          <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#a855f7' }}>Collections</Text>
+          <Text style={{ fontSize: 16, color: 'gray', marginTop: 8 }}>Create folders to organise your looks</Text>
         </View>
         <View style={styles.searchContainer}>
           <TextInput
@@ -19,8 +19,18 @@ export default function Collections() {
             placeholder="Search collections..."
             placeholderTextColor="#999"
           />
+          <View style={styles.folder}>
+            <View style={styles.imageContainer}>
+              <Image source={kay} style={styles.folderImage} />
+              
+              <View style={styles.badge}>
+                <Text style={styles.badgeText}>12 looks</Text>
+              </View>
+            </View>
+            
+            <Text style={styles.titleText}>Boss Mode</Text>
+          </View>
         </View>
-
       </ScrollView>
 
       <TouchableOpacity
@@ -80,5 +90,53 @@ const styles = StyleSheet.create({
     fontSize: 32,
     color: '#fff',
     fontWeight: '300',
+  },
+  folder: {
+    height: 150,
+    width: '100%',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    marginTop: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+    overflow: 'hidden',
+  },
+  imageContainer: {
+    width: '100%',
+    height: 120,
+    position: 'relative',
+  },
+  folderImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
+  badge: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    backgroundColor: '#ec4899',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  badgeText: {
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  titleText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 8,
+    textAlign: 'center',
   },
 });
