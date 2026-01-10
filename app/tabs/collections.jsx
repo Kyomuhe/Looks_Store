@@ -10,7 +10,7 @@ export default function Collections() {
 
       <ScrollView style={styles.scrollView}>
         <View style={{ flex: 1, marginTop: 50 }}>
-          <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#ec4899' }}>Collections</Text>
+          <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#ec4899' }}>Collections</Text>
           <Text style={{ fontSize: 16, color: 'gray',marginTop: 8 }}>Create folders to organise your looks</Text>
         </View>
         <View style={styles.searchContainer}>
