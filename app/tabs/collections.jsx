@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity, TextInput, Image } from "react-native";
-import kay from '../../assets/images/kay.png'
+import kay from '../../assets/images/look4.png'
 
 export default function Collections() {
   const handleFABPress = () => {
